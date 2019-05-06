@@ -63,25 +63,35 @@ let inventory = [{"id":1,"car_make":"Lincoln","car_model":"Navigator","car_year"
 
 // ==== Challenge 1 ====
 // The dealer can't recall the information for a car with an id of 33 on his lot. Help the dealer find out which car has an id of 33 by logging the car's year, make, and model in the console log provided to you below:
-console.log(`Car 33 is a *car year goes here* *car make goes here* *car model goes here*` );
+//console.log(`Car 33 is a *car year goes here* *car make goes here* *car model goes here*` );
 
-let filteredArray = inventory.filter((car) => {
-    return car.id === 33;
-})
+/*let filteredArray = [];
+for (let i = 0; i < inventory.length; i++) {
+    if (inventory[i].id === 33){
+        filteredArray.push(inventory[i])
+    }
+}
+*/
+const {car_year, car_make, car_model} = inventory.filter(car=>car.id === 33)[0]
 
-console.log(`Car 33 is a ${ "car_year"}, ${ "car_make"}, ${ "car_model"}`);
+// const {car_year, car_make, car_model} = filteredArray[0]
 
-// ==== Challenge 2 ====
+console.log(`Car 33 is a ${car_year}, ${car_make}, ${car_model}`);
+
+
+
+
+
+/*// ==== Challenge 2 ====
 // The dealer needs the information on the last car in their inventory.  What is the make and model of the last car in the inventory?  Log the make and model into the console.
-let lastCar = 0;
-console.log();
+let lastCar = inventory.pop ();
+console.log(lastCar);
 
 // ==== Challenge 3 ====
 // The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
-/*let carModels =  inventory.sort(model => {
-    return model.car_model
-});
-console.log(carModels.sort());*/
+let carModels =  
+
+console.log(carModels.sort());
  
 
 // ==== Challenge 4 ====
@@ -95,7 +105,7 @@ let oldCars = [];
 console.log(); 
 
 // ==== Challenge 6 ====
-// A buyer is interested in seeing only BMW and Audi cars within the inventory.  Return an array that only contains BMW and Audi cars.  Once you have populated the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.
+// A buyer is interested in seeing only BMW and Audi cars within the inventory.  Return an array that only contains BMW and Audi cars.  Once you have populated the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.*/
 let BMWAndAudi = [];
 console.log();
 
